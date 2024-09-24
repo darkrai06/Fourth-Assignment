@@ -77,7 +77,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
             break;
         }
     }
-    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount && flag) {
         addDonationHistory(donationAmount, "Flood Relief in Feni, Bangladesh");
     }
 });
@@ -93,7 +93,7 @@ document.getElementById('quota-btn').addEventListener('click', function () {
             break;
         }
     }
-    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount && flag) {
         addDonationHistory(donationAmount, "Aid for Injured in the Quota Movement");
     }
 });
