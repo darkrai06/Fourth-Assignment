@@ -45,24 +45,26 @@ function addDonationHistory(amount, cause) {
     updateHistory();
 }
 
+const mainBalance= document.getElementById('taka').innerText;
+const numBalance= parseFloat(mainBalance);
 
 document.getElementById('noakhali-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('noakhali-money').value;
-    if (donationAmount && donationAmount > 0) {
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
         addDonationHistory(donationAmount, "Flood Relief in Noakhali, Bangladesh");
     }
 });
 
 document.getElementById('feni-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('feni-money').value;
-    if (donationAmount && donationAmount > 0) {
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
         addDonationHistory(donationAmount, "Flood Relief in Feni, Bangladesh");
     }
 });
 
 document.getElementById('quota-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('quota-money').value;
-    if (donationAmount && donationAmount > 0) {
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
         addDonationHistory(donationAmount, "Aid for Injured in the Quota Movement");
     }
 });
