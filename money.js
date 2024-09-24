@@ -38,7 +38,7 @@ function addingMoney(elementID, workID, modalID) {
         console.log('Modal found');
         modalElement.showModal();
     } else {
-        console.error('Modal element not found');
+        console.log('Modal element not found');
     }
 }
 

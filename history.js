@@ -11,23 +11,23 @@ function updateHistory() {
         noHistory.classList.add('hidden');
         historyContainer.classList.remove('hidden');
 
-        donationHistory.forEach(entry => {
+        for (const entry of donationHistory) {
             const historyEntry = document.createElement('div');
             historyEntry.classList.add('bg-white', 'shadow', 'p-4', 'rounded-lg', 'flex', 'flex-col', 'gap-2');
-
+        
             const donationText = document.createElement('p');
             donationText.textContent = `${entry.amount} Taka is Donated for ${entry.cause}`;
             donationText.classList.add('text-base', 'font-bold');
-
+        
             const dateText = document.createElement('p');
             dateText.textContent = `Date: ${entry.date}`;
             dateText.classList.add('text-sm', 'text-gray-500');
-
+        
             historyEntry.appendChild(donationText);
             historyEntry.appendChild(dateText);
-
+        
             historyContainer.appendChild(historyEntry);
-        });
+        }
     } else {
         noHistory.classList.remove('hidden');
         historyContainer.classList.add('hidden');
