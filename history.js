@@ -48,15 +48,35 @@ function addDonationHistory(amount, cause) {
 const mainBalance= document.getElementById('taka').innerText;
 const numBalance= parseFloat(mainBalance);
 
+
+
 document.getElementById('noakhali-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('noakhali-money').value;
-    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
+    let flag= 1;
+    for (const child of donationAmount) {
+        if (child >= '0' && child <= '9') 
+             continue;
+        else {
+            flag=0;
+            break;
+        }
+    }
+    if (donationAmount && donationAmount > 0 && numBalance >= donationAmount && flag) {
         addDonationHistory(donationAmount, "Flood Relief in Noakhali, Bangladesh");
     }
 });
 
 document.getElementById('feni-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('feni-money').value;
+    let flag= 1;
+    for (const child of donationAmount) {
+        if (child >= '0' && child <= '9') 
+             continue;
+        else {
+            flag=0;
+            break;
+        }
+    }
     if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
         addDonationHistory(donationAmount, "Flood Relief in Feni, Bangladesh");
     }
@@ -64,6 +84,15 @@ document.getElementById('feni-btn').addEventListener('click', function () {
 
 document.getElementById('quota-btn').addEventListener('click', function () {
     const donationAmount = document.getElementById('quota-money').value;
+    let flag= 1;
+    for (const child of donationAmount) {
+        if (child >= '0' && child <= '9') 
+             continue;
+        else {
+            flag=0;
+            break;
+        }
+    }
     if (donationAmount && donationAmount > 0 && numBalance >= donationAmount) {
         addDonationHistory(donationAmount, "Aid for Injured in the Quota Movement");
     }
