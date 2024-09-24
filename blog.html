@@ -42,5 +42,42 @@
           </div>
         </div>
       </header>
+      <main class="flex flex-col items-center p-8 mx-auto gap-12">
+        <div class="flex gap-6">
+            <h1 class="text-4xl font-extrabold">Important FAQ</h1>
+            <i class="fa-regular fa-comment text-4xl"></i>
+        </div>
+        <div class="flex flex-col gap-6">
+        <div class="collapse collapse-arrow bg-base-200 w-full">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p>The DOM is a tree structure representing the HTML of a web page, allowing scripts to interact with elements.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 w-full">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p>Use document.getElementById(), querySelector(), or similar methods to select an Element.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 w-full">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>A technique where a parent element handles events from its children, useful for efficiency and dynamic content.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200 w-full">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>Use element.setAttribute(), element.style.property = value, or classList methods.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="py-16 bg-[#F9F7F3]"></footer>
 </body>
 </html>
